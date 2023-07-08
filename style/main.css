@@ -26,6 +26,7 @@ body::-webkit-scrollbar{
 .each-line-title{
   /* display: line; */
   text-decoration: none;
+  color: white;
 }
 
 .about-button{
@@ -73,12 +74,13 @@ body::-webkit-scrollbar{
   font-family: 'Roboto Mono', monospace;
   font-size: 10px;
   position: absolute;
+  text-align: left;
 }
 
 .about-text.show{
   display: block;
   margin-left: 50px;
-  margin-right: 200px;
+  margin-right: 150px;
   line-height: 20px;
 }
 
@@ -127,3 +129,59 @@ body::-webkit-scrollbar{
   color: white;
  }
  
+ @media only screen and (max-width: 500px){
+  .about-text-box.show{
+    width: 30px;
+    height: 1px;
+    background-color: white;
+  }
+
+  .about-text{
+    display:none;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    position: fixed;
+    text-align: center;
+    background-color: white;
+  }
+
+  .images.show{
+    filter:brightness(0.2);
+    z-index: 1;
+  }
+  
+  .about-text.show{
+    display: block;
+    margin-right: 50px;
+    padding-top: 190px;
+    line-height: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.17);
+    z-index: 2;
+    border: none;
+  }
+  
+  .contact-button{
+    font-size: 11px;
+  }
+
+  .contact-text{
+    display:none;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    right: 10px;
+    position: absolute;
+  }
+  
+  .contact-text.show{
+    display: block;
+    margin-top: 242px;
+    margin-left: 50%;
+    margin-right: 30%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+ }

@@ -26,6 +26,7 @@ function showSlide() {
   images.forEach((image) => {
     image.style.display = 'none';
   });
+  
 
   // Show the current slide
   images[currentSlide].style.display = 'block';
@@ -38,6 +39,11 @@ function showSlide() {
       link.classList.remove('active');
     }
   });
+
+  setTimeout(() => {
+    imageContainer.classList.remove('slide-animation'); // Remove CSS class after the animation
+  }, 600); // Adjust the timeout to match the transition duration
+  
 }
 
 // Function to go to a specific slide
@@ -52,6 +58,11 @@ function nextSlide() {
   if (currentSlide >= images.length) {
     currentSlide = 0;
   }
+  imageContainer.classList.add('slide-animation');
+  setTimeout(() => {
+    showSlide();
+    imageContainer.classList.remove('slide-animation');
+  }, 10);
   showSlide();
 }
 
@@ -61,6 +72,11 @@ function prevSlide() {
   if (currentSlide < 0) {
     currentSlide = images.length - 1;
   }
+  imageContainer.classList.add('slide-animation');
+  setTimeout(() => {
+    showSlide();
+    imageContainer.classList.remove('slide-animation');
+  }, 10);
   showSlide();
 }
 
@@ -81,3 +97,4 @@ prevButton.addEventListener('click', prevSlide);
 
 // Show the initial slide
 showSlide();
+

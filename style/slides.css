@@ -29,7 +29,7 @@
   display: flex;
   column-gap: 1rem;
   position: absolute;
-  bottom: 1.25rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -46,6 +46,10 @@
 
 .images-nav a:hover{
   opacity: 1;
+}
+
+.image-container.slide-animation {
+  transition-duration: 3s; /* Adjust the duration for a smoother animation */
 }
 
 .exmapleImg{
@@ -89,3 +93,35 @@
   right: 0;
 }
 
+@media only screen and (max-width: 500px){
+  .next-slide-button{
+    margin-left: 80%;
+  }
+
+  .images-nav{
+    display: flex;
+    column-gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .image-container{
+    position: relative;
+    max-width: 30rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .images{
+    display: flex;
+    aspect-ratio: 1/1;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+  }
+}

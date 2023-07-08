@@ -16,7 +16,9 @@
     <section class = "menu-buttons">
       <button class = "about-button">about</button>>
 
-      <p class = "about-text">The term "haemagallery" combines "haema," which is the Korean word for "Hippocampus" in English, and "gallery."<br> Hippocampus is a part of the brain responsible for memory. Therefore, "haemagallery" implies "a gallery of memories."<br>Welcome to haemagallery. Enjoy.</p>
+      <div class = "about-text-box" id = "blur">
+        <p class = "about-text">The term "haemagallery" combines "haema," which is the Korean word for "Hippocampus" in English, and "gallery."<br> Hippocampus is a part of the brain responsible for memory. Therefore, "haemagallery" implies "a gallery of memories."<br>Welcome to haemagallery. Enjoy.</p>
+      </div>
       
       <button class = "contact-button">contact</button>
   
@@ -34,8 +36,8 @@
 
 
     <div class = "heamagallery-header">
-      <a href="home.html" class="each-line-title">haema</a><br>
-      <a href="home.html" class="each-line-title">gallery</a>
+      <a href="haemagallery.com" class="each-line-title">haema</a><br>
+      <a href="haemagallery.com" class="each-line-title">gallery</a>
     </div>
 
     <section class = "container">
@@ -63,6 +65,17 @@
     </section>
     
 
-    <script src = "script/main.js"></script>
+    <script>
+      if (window.matchMedia('(max-width: 500px)').matches) {
+        var script = document.createElement('script');
+        script.src = 'script/main-mobile.js';
+        document.head.appendChild(script);
+      } 
+      else{
+        var script = document.createElement('script');
+        script.src = 'script/main.js';
+        document.head.appendChild(script);
+      }
+    </script>
   </body>
 </html>
