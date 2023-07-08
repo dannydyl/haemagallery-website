@@ -90,3 +90,38 @@ body::-webkit-scrollbar{
   
 } */
 
+.instagram-icon{
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.instagram-icon-img{
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: -5px;
+}
+
+ .instagram-name{
+  margin-top: 10px;
+  margin-left: -1px;
+ }
+
+ .instagram-hyperlink{
+  text-decoration: none;
+  color: white;
+ }
+ 
+.instagram-name:hover{
+  color: red;
+ }
+
+ a:visited{
+  color: white;
+ }
