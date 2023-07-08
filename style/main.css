@@ -24,7 +24,8 @@ body::-webkit-scrollbar{
 }
 
 .each-line-title{
-  display: line;
+  /* display: line; */
+  text-decoration: none;
 }
 
 .about-button{
@@ -125,3 +126,4 @@ body::-webkit-scrollbar{
  a:visited{
   color: white;
  }
+ 

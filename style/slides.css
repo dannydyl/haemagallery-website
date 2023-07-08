@@ -2,6 +2,7 @@
   position: relative;
   max-width: 30rem;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .images{
@@ -11,6 +12,7 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   transition: transform 0.3s ease-in-out;
+  object-fit: cover;
 }
 
 .images::-webkit-scrollbar{
@@ -74,3 +76,16 @@
 .prev-slide-button:hover, .next-slide-button:hover{
   opacity: 1;
 }
+
+.next-prev-button{
+  font-size: auto;
+ }
+
+ .next-prev-button .prev-slide-button {
+  left: 0;
+}
+
+.next-prev-button .next-slide-button {
+  right: 0;
+}
+
