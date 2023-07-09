@@ -12,6 +12,13 @@ contactButton.addEventListener('click', () => {
   contactText.classList.toggle('show');
 });
 
+document.body.addEventListener('click', (event) => {
+  if (!aboutButton.contains(event.target) && !contactButton.contains(event.target)) {
+    aboutText.classList.remove('show');
+    contactText.classList.remove('show');
+  }
+});
+
 // Get the image container, images, and navigation links
 const imageContainer = document.querySelector('.image-container');
 const images = document.querySelectorAll('.images img');

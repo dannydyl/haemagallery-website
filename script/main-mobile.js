@@ -13,6 +13,11 @@ aboutButton.addEventListener('click', () => {
     imgBright.classList.toggle('show');
     isPopUpVisible = true;
   }
+  else{
+    aboutText.classList.remove('show');
+    imgBright.classList.remove('show');
+    isPopUpVisible = false;
+  }
 });
 
 contactButton.addEventListener('click', () => {
@@ -21,7 +26,13 @@ contactButton.addEventListener('click', () => {
     imgBright.classList.toggle('show');
     isPopUpVisible = true;
   }
+  else{
+    contactText.classList.remove('show');
+    imgBright.classList.remove('show');
+    isPopUpVisible = false;
+  }
 });
+
 
 document.body.addEventListener('click', (event) => {
   if (!aboutButton.contains(event.target) && !contactButton.contains(event.target)) {
@@ -31,6 +42,7 @@ document.body.addEventListener('click', (event) => {
     isPopUpVisible = false;
   }
 });
+
 
 // Get the image container, images, and navigation links
 const imageContainer = document.querySelector('.image-container');

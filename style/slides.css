@@ -12,7 +12,8 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   transition: transform 0.3s ease-in-out;
-  object-fit: cover;
+  /* object-fit: cover; */
+  width: auto;
 }
 
 .images::-webkit-scrollbar{
@@ -22,7 +23,7 @@
 .images img{
   flex: 1 0 100%;
   scroll-snap-align: start;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .images-nav{
@@ -122,6 +123,5 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     transition: transform 0.3s ease-in-out;
-    object-fit: cover;
   }
 }

@@ -39,6 +39,10 @@ body::-webkit-scrollbar{
   font-family: 'Roboto Mono', monospace;
 }
 
+.about-button[open]{
+  animation: fade-in 500ms forawrds;
+}
+
 .contact-button{
   background-color: black;
   color: white;
@@ -144,6 +148,8 @@ body::-webkit-scrollbar{
     position: fixed;
     text-align: center;
     background-color: white;
+    filter: blur(10px);
+    transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
   }
 
   .images.show{
@@ -160,6 +166,7 @@ body::-webkit-scrollbar{
     background-color: rgba(0, 0, 0, 0.17);
     z-index: 2;
     border: none;
+    filter: blur(0);
   }
   
   .contact-button{
@@ -173,6 +180,7 @@ body::-webkit-scrollbar{
     font-size: 11px;
     right: 10px;
     position: absolute;
+    transition: opacity 0.5s ease-in-out;
   }
   
   .contact-text.show{
