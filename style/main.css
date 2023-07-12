@@ -9,6 +9,8 @@ body{
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   
+
+  zoom: 150%;
 }
 
 body::-webkit-scrollbar{
@@ -39,9 +41,6 @@ body::-webkit-scrollbar{
   font-family: 'Roboto Mono', monospace;
 }
 
-.about-button[open]{
-  animation: fade-in 500ms forawrds;
-}
 
 .contact-button{
   background-color: black;
@@ -60,32 +59,35 @@ body::-webkit-scrollbar{
 }
 
 .contact-text{
-  display:none;
+  opacity: 0;
   color: white;
   font-family: 'Roboto Mono', monospace;
   font-size: 10px;
   right: 10px;
   position: absolute;
+  transition: opacity 1s linear;
 }
 
 .contact-text.show{
-  display: block;
+  opacity: 1;
 }
 
 .about-text{
-  display:none;
+  opacity: 0;
   color: white;
   font-family: 'Roboto Mono', monospace;
   font-size: 10px;
   position: absolute;
   text-align: left;
-}
-
-.about-text.show{
-  display: block;
   margin-left: 50px;
   margin-right: 150px;
   line-height: 20px;
+
+  transition: opacity 1s linear;
+}
+
+.about-text.show{
+  opacity: 1;
 }
 
 /* 
@@ -134,22 +136,33 @@ body::-webkit-scrollbar{
  }
  
  @media only screen and (max-width: 500px){
-  .about-text-box.show{
-    width: 30px;
-    height: 1px;
-    background-color: white;
-  }
+
 
   .about-text{
-    display:none;
+    opacity: 0;
+    /* transition: opacity 1s linear; */
+
     color: white;
     font-family: 'Roboto Mono', monospace;
-    font-size: 11px;
-    position: fixed;
-    text-align: center;
-    background-color: white;
-    filter: blur(10px);
-    transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+    font-size: 8px;
+    position: absolute;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.17);
+    z-index: 2;
+
+    margin-top: 55%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 13%;
+    padding-right: 15%;
+
+    line-height: 18px;
+
+  }
+
+ .about-text.show{
+    opacity: 1;
   }
 
   .images.show{
@@ -157,39 +170,35 @@ body::-webkit-scrollbar{
     z-index: 1;
   }
   
-  .about-text.show{
-    display: block;
-    margin-right: 50px;
-    padding-top: 190px;
-    line-height: 20px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.17);
-    z-index: 2;
-    border: none;
-    filter: blur(0);
-  }
+ 
   
   .contact-button{
     font-size: 11px;
   }
 
   .contact-text{
-    display:none;
+    opacity: 0;
+    transition: opacity 1s linear; 
+    position: absolute;
     color: white;
     font-family: 'Roboto Mono', monospace;
-    font-size: 11px;
-    right: 10px;
-    position: absolute;
-    transition: opacity 0.5s ease-in-out;
+    font-size: 8px;
+    
+    margin-top: 75%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 15%;
+    padding-right: 26%; 
+    /* 이렇게 중앙을 맞추는게 맞는지는 모르겠는데 일단 억지로 맞춤 */
+    
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, 0.2);
   }
   
   .contact-text.show{
-    display: block;
-    margin-top: 242px;
-    margin-left: 50%;
-    margin-right: 30%;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
   }
   
  }
