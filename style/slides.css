@@ -86,7 +86,7 @@
   font-size: auto;
  }
 
- .next-prev-button .prev-slide-button {
+.next-prev-button .prev-slide-button {
   left: 0;
 }
 
@@ -103,6 +103,8 @@
     display: flex;
     column-gap: 0.5rem;
     position: absolute;
+    /* flex-direction: row; 이거 확실하지 않음
+    justify-content: center; */
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
@@ -124,4 +126,19 @@
     scroll-behavior: smooth;
     transition: transform 0.3s ease-in-out;
   }
+
+  .images-nav{
+    display: absolute;
+    column-gap: 0.75rem;
+    position: absolute;
+    bottom: 1rem;
+    /* left: 30%; */
+    transform: translateX(-50%);
+    margin-bottom: 22%;
+    z-index: 1;
+  }
+
+  /* .next-slide-button{
+    모바일 환경에서 넥스트 버튼 아직도 제 자리에 있지 못함
+  } */
 }
