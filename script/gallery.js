@@ -11,7 +11,7 @@ const handleOnDown = e => {
 const handleOnUp = () => {
   track.dataset.mouseDownAt = "0";  
   track.dataset.prevPercentage = track.dataset.percentage; // 얘가 전에 스크롤에서 멈춘 지점을 못읽음.
-  console.log(track.dataset.prevPercentage);
+  // console.log(track.dataset.prevPercentage);
 
 }
 
@@ -48,7 +48,7 @@ const handleOnMove = e => {
 }
 
 
-// //Makes scroll work in horizontally 얘는 전에 마우스가 어디서 멈췄는지 그 퍼센트를 읽어
+//Makes scroll work in horizontally 얘는 전에 마우스가 어디서 멈췄는지 그 퍼센트를 읽어
 // window.addEventListener('wheel', (event) => {
 //   event.preventDefault();
 

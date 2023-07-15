@@ -6,15 +6,15 @@ body{
 
   background-color: black;
 
-  /* scrollbar-width: thin;
-  scrollbar-color: transparent transparent; */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 
 
 }
 
-/* body::-webkit-scrollbar{
+body::-webkit-scrollbar{
   display: none;
-} */
+}
 
 /* body {
   height: 100vh;
@@ -39,4 +39,24 @@ body{
   height: 70vmin;
   object-fit: cover;
   object-position: 100% center;
+}
+
+/* still need opactiy style and words saying drag with mouse */
+#explanation{ 
+  position: absolute;
+  transform: rotate(180deg);
+  background-color: transparent;
+  top: 50%;
+  bottom: 50%;
+  left: 20%;
+  
+}
+
+#explanation img{
+  background-color: transparent;
+  mix-blend-mode: multiply;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  filter: invert(100%);
+  
 }
