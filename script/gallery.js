@@ -1,4 +1,3 @@
-
 const track = document.getElementById("image-track");
 
 // 마우스가 클릭한 순간의 coordinate을 저장
@@ -84,3 +83,14 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+document.addEventListener("DOMContentLoaded", function(){
+  document.getElementById("explanation").classList.toggle('show');
+  document.querySelector(".arrowImg").classList.toggle('show');
+
+  setTimeout(function(){
+    document.getElementById("explanation").classList.remove('show');
+    document.querySelector(".arrowImg").classList.remove('show');
+  },3000);
+});
+
