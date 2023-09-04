@@ -134,7 +134,33 @@ body::-webkit-scrollbar{
  a:visited{
   color: white;
  }
+
+ .gallery_button{
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+
+  position:absolute;
+  left: 50%; /* Horizontally center the button */
+  transform: translateX(-50%); /* Move the button left by 50% of its own width */
+  top: 750px; /* Vertically center the button */
+  /*transform: translateY(-40%); /* Move the button up by 50% of its own height */
+
+  z-index: 100;
+ }
  
+ .gallery_link:hover{
+  color: red;
+ }
+
+ .gallery_link{
+  text-decoration: none;
+  
+ }
+
  @media only screen and (max-width: 500px){
 
 
